@@ -4,6 +4,8 @@
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
         <title>Licznik wartości odżywczych</title>
+        <h:outputStylesheet name="default.css" library="css"/>
+        <h:outputStylesheet name="index.css" library="css"/>
         <meta charset="UTF-8"/>
         <meta name="description" content="Strona dla osób świadomych swojej diety"/>
         <meta 
@@ -11,8 +13,6 @@
             content="liczenie, wartości, odżywcze, kalorie, białko, tłuszcze, węglowodany"
             />
         <meta name="author" content="Maciej Witkowski i Błażej Krzeptowski"/>
-        <link rel="stylesheet" href="./styles/default.css" />
-        <link rel="stylesheet" href="./styles/index.css" />
     </h:head>
     <h:body>
         <div class="main-container">
@@ -25,34 +25,34 @@
         <nav id="navigation">
                 <h2>Strona Główna</h2>
                 <div class="navbar">
-                    <a href="./index.xhtml">Stron Główna</a>
+                    <h:link outcome="index.xhtml">Stron Główna</h:link>
                     <div class="subnav">
                       <button class="subnavbtn">Dodaj Produkt</button>
                       <div class="subnav-content">
-                        <a href="./dodaj_produkt.xhtml">Opcja 1</a>
+                        <h:link outcome="dodaj_produkt.xhtml">Opcja 1</h:link>
                         <div class="subnav">
                             <button class="subnavbtn">Opcja 2 (zagnieżdżenie)<i class="fa fa-caret-down"></i></button>
                             <div class="subnav-content">
-                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 1</a>
-                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 2</a>
-                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 3</a>
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 1</h:link>
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 2</h:link>
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 3</h:link>
                             </div>
                           </div>
-                        <a href="./dodaj_produkt.xhtml">Opcja 3</a>
+                        <h:link outcome="dodaj_produkt.xhtml">Opcja 3</h:link>
                       </div>
                     </div>
                     <div class="subnav">
                       <button class="subnavbtn">Lista Produktów</button>
                       <div class="subnav-content">
-                        <a href="./lista_produktow.xhtml">Opcja 1</a>
-                        <a href="./lista_produktow.xhtml">Opcja 2</a>
-                        <a href="./lista_produktow.xhtml">Opcja 3</a>
-                        <a href="./lista_produktow.xhtml">Opcja 4</a>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 1</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 2</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 3</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 4</h:link>
                       </div>
                     </div>
-                    <a href="./galeria.xhtml">Galeria</a>
-                    <a href="./o_nas.xhtml">O projekcie</a>
-                    <a href="./kontakt.xhtml">Kontakt</a>
+                    <h:link outcome="galeria.xhtml">Galeria</h:link>
+                    <h:link outcome="o_nas.xhtml">O projekcie</h:link>
+                    <h:link outcome="kontakt.xhtml">Kontakt</h:link>
                     Zmiana danych, wylogowanie, logowanie
               
                   </div>
@@ -65,9 +65,9 @@
                 <h4>Linki do podstron</h4>
                 <header>
                     <ul>
-                        <li><a href="./lista_produktow.xhtml">Lista produktów</a></li>
-                        <li><a href="./dodaj_produkt.xhtml">Dodaj nowy produkt</a></li>
-                        <li><a href="./kontakt.xhtml">Kontakt z twórcami</a></li>
+                        <li><h:link outcome="lista_produktow.xhtml">Lista produktów</h:link></li>
+                        <li><h:link outcome="dodaj_produkt.xhtml">Dodaj nowy produkt</h:link></li>
+                        <li><h:link outcome="kontakt.xhtml">Kontakt z twórcami</h:link></li>
                     </ul>
                 </header>
                 <details>

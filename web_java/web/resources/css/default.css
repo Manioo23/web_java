@@ -1,5 +1,5 @@
 body {
-    background: url("../files/prism.png");
+    background: url("#{resource['images/prism.png']}");
     background-repeat: repeat;
     background-position: top;
     background-attachment: fixed;
@@ -123,3 +123,4 @@ a:hover {
 input:focus {
     background-color: lightgreen;
 }
+

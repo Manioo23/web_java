@@ -11,13 +11,12 @@
             content="liczenie, wartości, odżywcze, kalorie, białko, tłuszcze, węglowodany"
             />
         <meta name="author" content="Maciej Witkowski i Błażej Krzeptowski"/>
-        <h:outputStylesheet library="css" name="default.css" />
-        <h:outputStylesheet library="css" name="index.css" />
+        <h:outputStylesheet name="css/default.css" />
+        <h:outputStylesheet name="css/o_nas.css" />
     </h:head>
     <h:body>
         <a id="back-btn" href="#header-logo">Do Góry</a>
-        <div class="main-container">
-            
+        <div class ="main-container">
             <header id="header-logo">
                 <img alt="logo" src="https://i.pinimg.com/originals/4c/ee/21/4cee2121c36013527f60f55994b1e679.png" height="100"
                     width="100" />
@@ -26,42 +25,42 @@
             <section id="1">
             <nav id="navigation">
                 <h2>Strona Główna</h2>
-                <div class="navbar">
-                    <a href="./index.xhtml">Stron Główna</a>
-                    <div class="subnav">
-                      <button class="subnavbtn">Dodaj Produkt</button>
-                      <div class="subnav-content">
-                        <a href="./dodaj_produkt.xhtml">Opcja 1</a>
-                        <div class="subnav">
-                            <button class="subnavbtn">Opcja 2 (zagnieżdżenie)<i class="fa fa-caret-down"></i></button>
-                            <div class="subnav-content">
-                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 1</a>
-                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 2</a>
-                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 3</a>
+                <div class ="navbar">
+                    <h:link outcome="index.xhtml">Stron Główna</h:link>
+                    <div class ="subnav">
+                      <button class ="subnavbtn">Dodaj Produkt</button>
+                      <div class ="subnav-content">
+                        <h:link outcome="dodaj_produkt.xhtml">Opcja 1</h:link>
+                        <div class ="subnav">
+                            <button class ="subnavbtn">Opcja 2 (zagnieżdżenie)<i class ="fa fa-caret-down"></i></button>
+                            <div class ="subnav-content">
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 1</h:link>
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 2</h:link>
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 3</h:link>
                             </div>
                           </div>
-                        <a href="./dodaj_produkt.xhtml">Opcja 3</a>
+                        <h:link outcome="dodaj_produkt.xhtml">Opcja 3</h:link>
                       </div>
                     </div>
-                    <div class="subnav">
-                      <button class="subnavbtn">Lista Produktów</button>
-                      <div class="subnav-content">
-                        <a href="./lista_produktow.xhtml">Opcja 1</a>
-                        <a href="./lista_produktow.xhtml">Opcja 2</a>
-                        <a href="./lista_produktow.xhtml">Opcja 3</a>
-                        <a href="./lista_produktow.xhtml">Opcja 4</a>
+                    <div class ="subnav">
+                      <button class ="subnavbtn">Lista Produktów</button>
+                      <div class ="subnav-content">
+                        <h:link outcome="lista_produktow.xhtml">Opcja 1</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 2</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 3</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 4</h:link>
                       </div>
                     </div>
-                    <a href="./galeria.xhtml">Galeria</a>
-                    <a href="./o_nas.xhtml">O projekcie</a>
-                    <a href="./kontakt.xhtml">Kontakt</a>
+                    <h:link outcome="galeria.xhtml">Galeria</h:link>
+                    <h:link outcome="o_nas.xhtml">O projekcie</h:link>
+                    <h:link outcome="kontakt.xhtml">Kontakt</h:link>
                     zmien dane wyloguj zaloguj TODO
                   </div>
             </nav>
             </section>
             <section id="s2">
-            <div class="box-wrapper">
-                <div class="content-wrapper">
+            <div class ="box-wrapper">
+                <div class ="content-wrapper">
                     <img 
                         alt="Man walking" 
                         src="https://images.pexels.com/photos/2060972/pexels-photo-2060972.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
@@ -77,7 +76,7 @@
                         Integer vel lacus pulvinar, venenatis lorem vitae, aliquet mauris.
                     </p>
                 </div>
-                <div class="content-wrapper">
+                <div class ="content-wrapper">
                     <img 
                         alt="Man walking" 
                         src="https://images.pexels.com/photos/2416871/pexels-photo-2416871.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
@@ -93,7 +92,7 @@
                         Integer vel lacus pulvinar, venenatis lorem vitae, aliquet mauris.
                     </p>
                 </div>
-                <div class="content-wrapper">
+                <div class ="content-wrapper">
                     <img 
                         alt="Man walking" 
                         src="https://images.pexels.com/photos/1820689/pexels-photo-1820689.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
@@ -109,7 +108,7 @@
                         Integer vel lacus pulvinar, venenatis lorem vitae, aliquet mauris.
                     </p>
                 </div>
-                <div class="content-wrapper">
+                <div class ="content-wrapper">
                     <img 
                         alt="Man walking" 
                         src="https://images.pexels.com/photos/1567730/pexels-photo-1567730.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"

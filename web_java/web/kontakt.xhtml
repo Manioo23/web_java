@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Licznik wartości odżywczych</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Strona dla osób świadomych swojej diety"/>
+        <meta 
+            name="keywords" 
+            content="liczenie, wartości, odżywcze, kalorie, białko, tłuszcze, węglowodany"
+            />
+        <meta name="author" content="Maciej Witkowski i Błażej Krzeptowski"/>
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
+    </h:head>
+    <h:body>
+        <div class="main-container">
+
+        <header id="header-logo">
+            <img alt="logo" src="https://i.pinimg.com/originals/4c/ee/21/4cee2121c36013527f60f55994b1e679.png"
+                height="100" width="100" />
+            <h1>Licznik Spożycia</h1>
+        </header>
+        <section id="s1">
+        <nav id="navigation">
+                <h2>Strona Główna</h2>
+                <div class="navbar">
+                    <a href="./index.xhtml">Stron Główna</a>
+                    <div class="subnav">
+                      <button class="subnavbtn">Dodaj Produkt</button>
+                      <div class="subnav-content">
+                        <a href="./dodaj_produkt.xhtml">Opcja 1</a>
+                        <div class="subnav">
+                            <button class="subnavbtn">Opcja 2 (zagnieżdżenie)<i class="fa fa-caret-down"></i></button>
+                            <div class="subnav-content">
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 1</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 2</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 3</a>
+                            </div>
+                          </div>
+                        <a href="./dodaj_produkt.xhtml">Opcja 3</a>
+                      </div>
+                    </div>
+                    <div class="subnav">
+                      <button class="subnavbtn">Lista Produktów</button>
+                      <div class="subnav-content">
+                        <a href="./lista_produktow.xhtml">Opcja 1</a>
+                        <a href="./lista_produktow.xhtml">Opcja 2</a>
+                        <a href="./lista_produktow.xhtml">Opcja 3</a>
+                        <a href="./lista_produktow.xhtml">Opcja 4</a>
+                      </div>
+                    </div>
+                    <a href="./galeria.xhtml">Galeria</a>
+                    <a href="./o_nas.xhtml">O projekcie</a>
+                    <a href="./kontakt.xhtml">Kontakt</a>
+                    zmien dane wyloguj zaloguj
+                    
+                  </div>
+            </nav>
+        </section>
+        <section id="s2">
+
+            <a href="mailto:jan@kowalski.pl">Wyślij mail z aplikacji </a>
+            <p>
+                <img src="dietacud.png" alt="Dieta cud"/>
+            </p>
+
+            <p id="t1">
+                <strong>Skontaktuj się z nami, a twoja dieta nie będzie już męcząca.</strong>
+            </p>
+
+            <form id="myForm" method="post" action="contact.php" autocomplete="on">
+
+                <input type="hidden" name="recipient" value="deitel@deitel.com"/>
+                <input type="hidden" name="subject" value="Contact Form"/>
+
+                <p>
+                    <label>Imie:
+                        <input id="fname" name="Fname" type="text" size="15" maxlength="15" placeholder="Jan" />
+                    </label>
+                </p>
+
+                <p>
+                    <label>Nazwisko:
+                        <input 
+                            id="lname" 
+                            name="LName"
+                            type="text" 
+                            size="20" 
+                            maxlength="20" 
+                            placeholder="Kowalski"
+                            
+                            />
+                    </label>
+                </p>
+                <p>
+                    <label>Wiek:
+                        <input id="age" name="age" type="text" size="2" maxlength="2" placeholder="35"/>
+                    </label>
+                </p>
+                <p>
+                    <label for="txtList">Miesiac urodzenia:
+                        <input type="text" id="txtList" placeholder="Wybierz miesiac" list="months" />
+                        <datalist id="months">
+                            <option value="Styczen"/>
+                            <option value="Luty"/>
+                            <option value="Marzec"/>
+                            <option value="Kwiecien"/>
+                            <option value="Maj"/>
+                            <option value="Czerwiec"/>
+                            <option value="Lipiec"/>
+                            <option value="Sierpien"/>
+                            <option value="Wrzesien"/>
+                            <option value="Pazdziernik"/>
+                            <option value="Listopad"/>
+                            <option value="Grudzien"/>
+                        </datalist>
+                    </label>
+                </p>
+                <p>
+                    <label>E-mail:
+                        <input id="email" name="email" type="email" size="25" maxlength="30"
+                            placeholder="nazwa@domena.com" />
+                        (nazwa@domena.com)
+                    </label>
+                </p>
+                <p> 
+                    <label>Tel:
+                        <input id="tel" name="ftel" type="tel" placeholder="###-###-###" pattern="\d{3}-\d{3}-\d{3}" />
+                        ###-###-###
+                    </label>
+                </p>
+                <!-- creates a radio buttons -->
+
+                <p>
+                    Płeć:<br/>
+
+                    <label>Kobieta
+                        <input name="gender" type="radio" value="kobieta"/></label>
+                    <label>Mężczyzna
+                        <input name="gender" type="radio" value="mężczyzna"/></label>
+                </p>
+
+                <!-- creates a checkbox buttons-->
+
+                <p>
+                    Cel diety:<br/>
+
+                    <label>Utrata wagi
+                        <input name="weight_lose" type="checkbox" value="utrata wagi"/></label>
+                    <label>Przybranie wagi
+                        <input name="weight_gain" type="checkbox" value="przybranie wagi"/></label>
+                    <label>Budowanie masy mięśniowej
+                        <input name="muscle_gain" type="checkbox" value="budowanie masy mięśniowej"/></label>
+                    <label>Przygotowanie do zawodów
+                        <input name="tournament_preparation" type="checkbox" value="przygotowanie do zawodów"/></label>
+                </p>
+
+                <!-- creates a drop-down list-->
+
+                <p>
+                    <label>Okres trwania diety:
+
+                        <select name="period">
+                            <option selected="true">4 tygodnie</option>
+                            <option>8 tygodni</option>
+                            <option>7 tygodni</option>
+                            <option>6 tygodni</option>
+                            <option>5 tygodni</option>
+                            <option>4 tygodnie</option>
+                            <option>3 tygodnie</option>
+                            <option>2 tygodnie</option>
+                            <option>1 tydzień</option>
+                        </select>
+                    </label>
+                </p>
+
+                <!-- creates a multiline textbox -->
+
+                <p>
+                    <label>Wiadomość:<br/>
+                        <textarea id="wiadomosc" name="message" rows="4" cols="50"
+                            maxlength="200">Istotne informacje.</textarea>
+                    </label>
+                </p>
+                <p>
+                    <table id="canvas">
+                    <label><b><h3>Podpis</h3></b>
+                        <caption style="font-size: x-small;">
+                            Trzymaj <em>Ctrl</em> by pisac niebieskim.<br/>
+                            Trzymaj <em>Shift</em> by pisac czerwnym.<br/>
+                            Trzymaj <em>Alt</em> by pisac zielonym.<br/>
+                        </caption>
+                        <tbody id="tablebody"></tbody>
+                    </label>
+                    </table>
+                </p>
+                <p>
+                    <label id="helpText"></label>
+                </p>
+                <p>
+                    <input id="submit" type="submit" value="Submit"/>
+                    <input type="reset" value="Clear" id="clear_alert"/>
+                </p>
+            </form>
+        </section>
+        <section id="s3">
+            <footer>
+                <hr/>
+                <div>
+                    <h3>Twórcy</h3>
+                    <p>Strona stworzona przez <b>Błażeja Krzeptowskiego</b> i <b> Macieja Witkowskiego</b>.</p>
+                </div>
+                <div>
+                    username TODO
+                </div>
+            </footer>
+        </section>
+    </div>
+    </h:body>
+</html>
+

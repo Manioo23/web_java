@@ -1,0 +1,78 @@
+.main-container {
+    background-color: #00c853;
+    font-family: Calligraffitti;
+}
+
+#s2, #s3, #s4, #s5 {
+    padding: 15px;
+}
+
+.galery-wrapper {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 2px outset #265531;
+    text-align: center;
+}
+
+.galery-wrapper img {
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (max-width: 720px) {
+    .galery-wrapper {
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1180px) {
+    .galery-wrapper {
+        column-count: 4;
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    .galery-wrapper {
+        column-count: 5;
+    }
+}
+
+.galery-wrapper img:hover
+{
+    position: relative;
+    -webkit-animation: movingImage linear 10s 1s 2 alternate;
+    -moz-animation: movingImage linear 10s 1s 2 alternate;   
+    animation: movingImage linear 10s 2 1s alternate;  
+}
+@-webkit-keyframes movingImage               
+{                                            
+    0%   {opacity: 0; left: 50px; top: 0px;}  
+    25%  {opacity: 1; left: 0px; top:5 0px;}  
+    50%  {opacity: 0; left: 50px; top: 100px;}
+    75%  {opacity: 1; left: 100px; top: 50px;}
+    100% {opacity: 0; left: 50px; top: 0px;}  
+}                                            
+@-moz-keyframes movingImage                  
+{                                            
+    0%   {opacity: 0; left: 50px; top: 0px;}  
+    25%  {opacity: 1; left: 0px; top:5 0px;}  
+    50%  {opacity: 0; left: 50px; top: 100px;}
+    75%  {opacity: 1; left: 100px; top: 50px;}
+    100% {opacity: 0; left: 50px; top: 0px;}  
+}                                            
+@keyframes movingImage                       
+{                                            
+    0%   {opacity: 0; left: 50px; top: 0px;}  
+    25%  {opacity: 1; left: 0px; top: 50px;}  
+    50%  {opacity: 0; left: 50px; top: 100px;}
+    75%  {opacity: 1; left: 100px; top: 50px;}
+    100% {opacity: 0; left: 50px; top: 0px;}  
+}
+
+@font-face {
+    font-family: 'Calligraffitti';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Calligraffiti'),
+        url('http://themes.googleusercontent.com/static/fonts/calligraffitti/v1/vLVN2Y-z65rVu1R7lWdvyKIZAuDcNtpCWuPSaIR0Ie8.woff') format('woff');
+  }

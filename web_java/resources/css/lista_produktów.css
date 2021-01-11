@@ -1,0 +1,60 @@
+#a1, #s2, #s3, #s4, #s5 {
+    background-color: #00c853;
+    padding: 15px;;
+}
+
+#back-btn {
+    padding: 25px;
+    color: white;
+    background-color: #004d40;
+
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 2em;
+}
+
+#back-btn:hover {
+    cursor: pointer;
+    background-color: #39796b;
+}
+
+#s2 table{
+    padding: 5px;
+    cursor: default;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 25px 25px 50px rgba(41, 114, 38, 0.959);
+}
+
+#s2 th {
+    padding: 5px 10px;
+    border: 3px solid black;
+}
+
+#s2 td {
+    padding: 10px;
+    border: 1px dashed black;
+}
+
+#s2 tr:hover > td {
+    background-color: #009624;
+}
+
+#s3 > article > table {
+    padding: 5px;
+    border: 2px dashed #009624;
+}
+
+#s3 td {
+    padding: 20px;
+}
+
+#s3 table {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+}

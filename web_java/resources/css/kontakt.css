@@ -1,0 +1,30 @@
+#t1{
+    font-size: 20pt;
+    line-height: 150%;
+}
+input[type="text"]:enabled {
+    background: #277c75;
+  }
+#s2{
+    background-color: #00c853;
+    padding: 15px;;
+}
+#s3{
+    background: radial-gradient(#3a7753, #00c853);
+    padding: 15px;;
+    border: black 40px solid;
+    -webkit-border-image: url("../ramka.png") 80 80 80 80 stretch;
+    -moz-border-image: url("../ramka.png") 80 80 80 80 stretch;   
+    -o-border-image: url("../ramka.png") 80 80 80 80 stretch;     
+    border-image: url("../ramka.png") 80 80 80 80 stretch;     
+}
+#canvas{
+    width: 100px;
+    border-collapse: collapse;
+    border: 2px black solid;
+    background-color: white;
+}
+td{
+    height: 1px;
+    width: 1px;
+}

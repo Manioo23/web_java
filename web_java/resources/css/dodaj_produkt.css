@@ -1,0 +1,16 @@
+#s2, #s3 {
+    background-color: #00c853;
+    padding: 15px;
+}
+#t1{
+    font-size: 30px;
+    font-family: cursive;
+}
+#background{
+    background: #00c853;
+    background-position: 100% center; 
+    background-origin: content-box;     
+    background-repeat: no-repeat;
+    background-size: cover;   
+    padding: 15px;
+}

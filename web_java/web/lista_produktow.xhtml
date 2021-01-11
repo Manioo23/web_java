@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Licznik wartości odżywczych</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Strona dla osób świadomych swojej diety"/>
+        <meta 
+            name="keywords" 
+            content="liczenie, wartości, odżywcze, kalorie, białko, tłuszcze, węglowodany"
+            />
+        <meta name="author" content="Maciej Witkowski i Błażej Krzeptowski"/>
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
+    </h:head>
+    <h:body>
+        <a id="back-btn" href="#header-logo">Do Góry</a>
+        <div class="main-container">
+            
+            <header id="header-logo">
+                <img alt="logo" src="https://i.pinimg.com/originals/4c/ee/21/4cee2121c36013527f60f55994b1e679.png" height="100"
+                    width="100" />
+                <h1>Licznik Spożycia</h1>
+            </header>
+            <section id="1">
+            <nav id="navigation">
+                <h2>Strona Główna</h2>
+                <div class="navbar">
+                    <a href="./index.xhtml">Stron Główna</a>
+                    <div class="subnav">
+                      <button class="subnavbtn">Dodaj Produkt</button>
+                      <div class="subnav-content">
+                        <a href="./dodaj_produkt.xhtml">Opcja 1</a>
+                        <div class="subnav">
+                            <button class="subnavbtn">Opcja 2 (zagnieżdżenie)<i class="fa fa-caret-down"></i></button>
+                            <div class="subnav-content">
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 1</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 2</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 3</a>
+                            </div>
+                          </div>
+                        <a href="./dodaj_produkt.xhtml">Opcja 3</a>
+                      </div>
+                    </div>
+                    <div class="subnav">
+                      <button class="subnavbtn">Lista Produktów</button>
+                      <div class="subnav-content">
+                        <a href="./lista_produktow.xhtml">Opcja 1</a>
+                        <a href="./lista_produktow.xhtml">Opcja 2</a>
+                        <a href="./lista_produktow.xhtml">Opcja 3</a>
+                        <a href="./lista_produktow.xhtml">Opcja 4</a>
+                      </div>
+                    </div>
+                    <a href="./galeria.xhtml">Galeria</a>
+                    <a href="./o_nas.xhtml">O projekcie</a>
+                    <a href="./kontakt.xhtml">Kontakt</a>
+                    zmien dane wyloguj zaloguj TODO
+                  </div>
+            </nav>
+            </section>
+            <section id="s2">
+                <hr/>
+                <h3>Tabela</h3>
+                <table>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Ilość</th>
+                        <th>&sum; Energii</th>
+                        <th>Białko</th>
+                        <th>Tłuszcze</th>
+                        <th>Węglowodany</th>
+                    </tr>
+                    <tr>
+                        <td>Piersi z kurczaka</td>
+                        <td rowspan="7">100g</td>
+                        <td>98kcal</td>
+                        <td>21.5g</td>
+                        <td>1.3g</td>
+                        <td>0.0g</td>
+                    </tr>
+                    <tr>
+                        <td>Żółty ser</td>
+                        <td>356kcal</td>
+                        <td>24.9g</td>
+                        <td>27.4g</td>
+                        <td>2.2g</td>
+                    </tr>
+                    <tr>
+                        <td>Lody czekoladowe</td>
+                        <td>261kcal</td>
+                        <td>5.3g</td>
+                        <td>12.6g</td>
+                        <td>31.1g</td>
+                    </tr>
+                    <tr>
+                        <td>Jeżyki</td>
+                        <td>476kcal</td>
+                        <td>5.7g</td>
+                        <td>22.0g</td>
+                        <td>61.0g</td>
+                    </tr>
+                    <tr>
+                        <td>Espresso</td>
+                        <td>2kcal</td>
+                        <td>0.1g</td>
+                        <td>0.2g</td>
+                        <td>0.0g</td>
+                    </tr>
+                    <tr>
+                        <td>Ananas</td>
+                        <td>55kcal</td>
+                        <td>0.4g</td>
+                        <td>0.2g</td>
+                        <td>12.4g</td>
+                    </tr>
+                    <tr>
+                        <td>Awokado</td>
+                        <td>169kcal</td>
+                        <td>2.0g</td>
+                        <td>15.3g</td>
+                        <td>4.1g</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="s3">
+                <h3>Ilość ryżu w gramach na kalorie</h3>
+                <input type="number" id="rice-input"/>
+                <h4 id="rice-value"></h4>
+                <button id="rice-button">Przelicz</button>
+            </section>
+            <article id="a1">
+                <h3>Lista dodatkowa</h3>
+                <details>
+                    <summary>
+                        <mark>Produkty, które niedługo zostaną do bazy:</mark>
+                    </summary>
+                    <ol>
+                        <li>Wołowina</li>
+                        <li>Jaja</li>
+                        <li> Lody
+                            <ul>
+                                <li>Waniliowe</li>
+                                <li>Bakaliowe</li>
+                                <li>Truskawkowe</li>
+                                <li>Śmietankowe</li>
+                            </ul>
+                        </li>
+                        <li>Mascarpone</li>
+                        <li>Cafe Late</li>
+                        <li>Rodzynki</li>
+                        <li> Orzechy
+                            <ul>
+                                <li>Włoskie</li>
+                                <li>Brazylijskie</li>
+                                <li>Ziemne</li>
+                                <li>Laskowe</li>
+                            </ul>
+                        </li>
+                        <li>Pistacje</li>
+                    </ol>
+                </details>
+            </article>
+            <section id="s4">
+                <header>
+                    <h3 id="linki">Linki do plików z tabelą wartości</h3>
+                    <h4>Wykorzystano 20% transferu</h4>
+                    <meter min = "0" max = "100" value = "20"></meter>20%
+                </header>
+                <article>
+                    <h3>Linki</h3>
+                    <table>
+                        <tr>
+                            <th>Plik .txt</th>
+                            <th>Plik .csv</th>
+                            <th>Plik .xlsx</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <th>table.txt</th>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="./files/table.txt">link</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <th>table.csv</th>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="./files/files_csv/table.csv">link</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <th>table.xlsx</th>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="./files/table.xlsx">link</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+            <section id="s5">
+                <footer>
+                    <div>
+                        <h3>Twórcy</h3>
+                        <p>Strona stworzona przez <b>Błażeja Krzeptowskiego</b> i <b> Macieja Witkowskiego</b>.</p>
+                    </div>
+                    <div>
+                        username TODO
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </h:body>
+</html>
+

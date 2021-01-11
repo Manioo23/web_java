@@ -1,0 +1,50 @@
+#s2{
+    background-color: #00c853;
+    padding: 15px;;
+}
+#s3{
+    background-color: #00c853;
+    padding: 15px;;
+    border: black 40px solid;
+    -webkit-border-image:url("../ramka.png") 34% 34% repeat;
+    -moz-border-image:url("../ramka.png") 34% 34% repeat;   
+    -o-border-image:url("../ramka.png") 34% 34% repeat;     
+    border-image:url("../ramka.png") 34% 34% repeat;  
+}
+
+.box-wrapper {
+    width: 950px;
+    margin: auto;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
+}
+
+.content-wrapper {
+    position: relative;
+    transition: 200ms ease-out;
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 150px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.content-wrapper > img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    margin: auto;
+}
+
+.content-wrapper:hover {
+    cursor: pointer;
+    width: 225px;
+}
+
+.content-wrapper:nth-child(2n):hover {
+    background-color: #265531;
+}
+
+.content-wrapper:nth-child(2n+1):hover {
+    background-color: #254646;
+}

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Licznik wartości odżywczych</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Strona dla osób świadomych swojej diety"/>
+        <meta 
+            name="keywords" 
+            content="liczenie, wartości, odżywcze, kalorie, białko, tłuszcze, węglowodany"
+            />
+        <meta name="author" content="Maciej Witkowski i Błażej Krzeptowski"/>
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
+    </h:head>
+    <h:body>
+        <div class="main-container">
+        <header id="header-logo">
+            <img alt="logo" src="https://i.pinimg.com/originals/4c/ee/21/4cee2121c36013527f60f55994b1e679.png" height="100"
+                width="100" />
+            <h1>Licznik Spożycia</h1>
+        </header>
+        <section id="s1">
+        <nav id="navigation">
+                <h2>Strona Główna</h2>
+                <div class="navbar">
+                    <a href="./index.xhtml">Stron Główna</a>
+                    <div class="subnav">
+                      <button class="subnavbtn">Dodaj Produkt</button>
+                      <div class="subnav-content">
+                        <a href="./dodaj_produkt.xhtml">Opcja 1</a>
+                        <div class="subnav">
+                            <button class="subnavbtn">Opcja 2 (zagnieżdżenie)<i class="fa fa-caret-down"></i></button>
+                            <div class="subnav-content">
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 1</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 2</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 3</a>
+                            </div>
+                          </div>
+                        <a href="./dodaj_produkt.xhtml">Opcja 3</a>
+                      </div>
+                    </div>
+                    <div class="subnav">
+                      <button class="subnavbtn">Lista Produktów</button>
+                      <div class="subnav-content">
+                        <a href="./lista_produktow.xhtml">Opcja 1</a>
+                        <a href="./lista_produktow.xhtml">Opcja 2</a>
+                        <a href="./lista_produktow.xhtml">Opcja 3</a>
+                        <a href="./lista_produktow.xhtml">Opcja 4</a>
+                      </div>
+                    </div>
+                    <a href="./galeria.xhtml">Galeria</a>
+                    <a href="./o_nas.xhtml">O projekcie</a>
+                    <a href="./kontakt.xhtml">Kontakt</a>
+                    Zmien Dane Wyloguj Zaloguj TODO
+                    
+                  </div>
+            </nav>
+        </section>
+        <section id="s2" class="galery-wrapper">
+            <div class="galery-img">
+                <img
+                    alt="Food" 
+                    src="https://images.pexels.com/photos/1055270/pexels-photo-1055270.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/2907428/pexels-photo-2907428.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/2297961/pexels-photo-2297961.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/57042/pexels-photo-57042.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/2955816/pexels-photo-2955816.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/1376105/pexels-photo-1376105.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/57042/pexels-photo-57042.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+            <div class="galery-img">
+                <img
+                alt="Food" 
+                src="https://images.pexels.com/photos/2955816/pexels-photo-2955816.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" />
+            </div>
+        </section>
+        <section id="s3">
+            <button id="addImg">Dodaj</button>
+            <button id="deleteImg">Usuń ostatni</button>
+            <h3>Informacje o produkcie</h3>
+            <div id="imageInfoWrapper"></div>
+            <button type="button" id = "button_color">Zmien kolor</button>
+            <button type="button" id = "button_color_basic">Podstawowy kolor</button>
+        </section>   
+        <section id="s4">
+            <button id='toggleImg'>Zmien widoczność zdjęć</button>
+            <button id='toggleLink'>Zmien widoczność linków</button>
+            <br/>
+            <br/>
+            <form action="./save_cookie.php" method="POST">
+                <label>
+                    Font
+                    <select name="font" id="fSelect">
+                        <option value="Calligraffitti">Calligraffitti</option>
+                        <option value="Georgia">Serif</option>
+                        <option value="Tahoma">Sans-Serif</option>
+                        <option value="Courier">Monospace</option>
+                    </select>
+                </label>
+                <label>
+                    Text
+                    <select name="tColor" id="tColor">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="#00c853">Green</option>
+                        <option value="red">Red</option>
+                    </select>
+                </label>
+                <label>
+                    Background
+                    <select name="bColor" id="bColor">
+                        <option value="#00c853">Green</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                    </select>
+                </label>
+                <input id="submit" type="submit" value="Zapisz dane"/>
+            </form>
+        </section>        
+        <section id="s5">
+            <footer>
+                <hr/>
+                <div>
+                    <h3>Twórcy</h3>
+                    <p>Strona stworzona przez <b>Błażeja Krzeptowskiego</b> i <b> Macieja Witkowskiego</b>.</p>
+                </div>
+                <div>
+                    username TODO
+                </div>
+            </footer>
+        </section>
+    </div>
+    </h:body>
+</html>
+

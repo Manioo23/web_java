@@ -1,0 +1,125 @@
+body {
+    background: url("../files/prism.png");
+    background-repeat: repeat;
+    background-position: top;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+#header-logo {
+    text-align: center;
+    background-color: #00c853;
+    padding: 10px;
+}
+
+#header-logo > img {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+}
+
+#header-logo > img:hover {
+    transition: 400ms ease-out;
+    transform: scale(1.5) rotate(180deg) skew(45deg);
+}
+
+#header-logo > h1 {
+    margin: 0px;
+}
+
+#navigation {
+    position: relative;
+    background-color: #00c853;
+    padding: 10px 15px;
+}
+
+#navigation > h2 {
+    margin-bottom: 30px;
+}
+.navbar {
+    overflow: hidden;
+    background: rgba(1, 92, 77, 0.5);
+    margin: -15px;
+}
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+  
+.subnav > .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar > a:hover, .subnav:hover > .subnavbtn {
+    background-color: hsla(134, 65%, 33%, 0.5);
+    color: black;
+}
+  
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: hsla(134, 65%, 33%, 0.75);
+    color: black;
+    width: 100%;
+    z-index: 1;
+}
+  
+.subnav-content > a {
+    float: left;
+    text-decoration: none;
+}
+  
+.subnav-content > a:hover {
+    color: black;
+}
+  
+.subnav:hover > .subnav-content {
+    display: block;
+}
+
+@media screen and (max-width: 720px) {
+    .main-container {
+        width: 550px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1180px) {
+    .main-container {
+        width: 720px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    .main-container {
+        width: 1080px;
+        margin: auto;
+    }
+}
+
+a:active{
+    background-color: darkcyan;
+}
+a:hover {
+    background-color: yellow;
+}
+input:focus {
+    background-color: lightgreen;
+}

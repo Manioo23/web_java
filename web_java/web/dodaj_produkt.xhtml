@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Licznik wartości odżywczych</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Strona dla osób świadomych swojej diety"/>
+        <meta 
+            name="keywords" 
+            content="liczenie, wartości, odżywcze, kalorie, białko, tłuszcze, węglowodany"
+            />
+        <meta name="author" content="Maciej Witkowski i Błażej Krzeptowski"/>
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
+    </h:head>
+    <h:body>
+        <div class="main-container">
+            <header id="header-logo">
+                <img alt="logo" src="https://i.pinimg.com/originals/4c/ee/21/4cee2121c36013527f60f55994b1e679.png" height="100"
+                    width="100" />
+                <h1>Licznik Spożycia</h1>
+            </header>
+            <section id="s1">
+            <nav id="navigation">
+                <h2>Strona Główna</h2>
+                <div class="navbar">
+                    <a href="./index.xhtml">Stron Główna</a>
+                    <div class="subnav">
+                      <button class="subnavbtn">Dodaj Produkt</button>
+                      <div class="subnav-content">
+                        <a href="./dodaj_produkt.xhtml">Opcja 1</a>
+                        <div class="subnav">
+                            <button class="subnavbtn">Opcja 2 (zagnieżdżenie)<i class="fa fa-caret-down"></i></button>
+                            <div class="subnav-content">
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 1</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 2</a>
+                              <a href="./dodaj_produkt.xhtml">Opcja zagnieżdzona 3</a>
+                            </div>
+                          </div>
+                        <a href="./dodaj_produkt.xhtml">Opcja 3</a>
+                      </div>
+                    </div>
+                    <div class="subnav">
+                      <button class="subnavbtn">Lista Produktów</button>
+                      <div class="subnav-content">
+                        <a href="./lista_produktow.xhtml">Opcja 1</a>
+                        <a href="./lista_produktow.xhtml">Opcja 2</a>
+                        <a href="./lista_produktow.xhtml">Opcja 3</a>
+                        <a href="./lista_produktow.xhtml">Opcja 4</a>
+                      </div>
+                    </div>
+                    <a href="./galeria.xhtml">Galeria</a>
+                    <a href="./o_nas.xhtml">O projekcie</a>
+                    <a href="./kontakt.xhtml">Kontakt</a>
+                  </div>
+            </nav>
+            </section>
+            <section id="s2">
+                <h3>Dodaj produkt</h3>
+                <form method="post" action="addproduct.xhtml">     
+                    <p>
+                        <label>Nazwa produktu:
+                            <input name="name" type="text" placeholder="Nazwa produktu"/>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Email użytkownika:
+                            <input name="email" type="email" placeholder="przyklad@strona.com"/>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Telefon użytkownika:
+                            <input 
+                                name="phone"
+                                type = "tel" 
+                                placeholder = "+## ### ### ###"
+                                pattern = "\+\d{2} \d{3} \d{3} \d{3}" 
+                            /> 
+                        </label>
+                    </p>
+                    <p>
+                        <label>Color produktu:
+                            <input name="color" type="color" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>Ilość kalorii:
+                            <input name="calories" type="text"/>
+                        </label>
+                        <br/>
+                        <label>Ilość tłuszczy:
+                            <input name="fat" type="text"/>
+                        </label>
+                        <br/>
+                        <label>Ilość białka:
+                            <input name="protein" type="text"/>
+                        </label>
+                        <br/>
+                        <label>Ilość węglowodanów:
+                            <input name="carbohydrates" type="text"/>
+                        </label>
+                        <br/>
+                    </p>
+                    <p>
+                        <input type="submit" value="Wyślij"/>
+                        <input type="reset" value="Wyczyść"/>
+                    </p>
+                </form>
+            </section>
+            <section id="s3">
+                <footer>
+                    <div>
+                        <h3>Twórcy</h3>
+                        <p id = "t1">Strona stworzona przez <b>Błażeja Krzeptowskiego</b> i <b> Macieja Witkowskiego</b>.</p>
+                    </div>
+                    <div>
+                        username TODO
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </h:body>
+</html>

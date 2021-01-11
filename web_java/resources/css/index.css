@@ -1,0 +1,17 @@
+#s2, #s3 {
+    background-color: #00c853;
+    padding: 15px;;
+}
+#t1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: -4px 4px 6px dimgrey;
+}
+#t2{
+    font-size: 90%;
+    font-variant: small-caps;
+    border-style: dotted;
+    border-color: #00c853;
+    border-width: medium;
+}

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Licznik wartości odżywczych</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Strona dla osób świadomych swojej diety"/>
+        <meta 
+            name="keywords" 
+            content="liczenie, wartości, odżywcze, kalorie, białko, tłuszcze, węglowodany"
+            />
+        <meta name="author" content="Maciej Witkowski i Błażej Krzeptowski"/>
+        <h:outputStylesheet name="css/default.css" />
+        <h:outputStylesheet name="css/o_nas.css" />
+    </h:head>
+    <h:body>
+        <a id="back-btn" href="#header-logo">Do Góry</a>
+        <div class ="main-container">
+            <header id="header-logo">
+                <img alt="logo" src="https://i.pinimg.com/originals/4c/ee/21/4cee2121c36013527f60f55994b1e679.png" height="100"
+                    width="100" />
+                <h1>Licznik Spożycia</h1>
+            </header>
+            <section id="1">
+            <nav id="navigation">
+                <h2>Strona Główna</h2>
+                <div class ="navbar">
+                    <h:link outcome="index.xhtml">Stron Główna</h:link>
+                    <div class ="subnav">
+                      <button class ="subnavbtn">Dodaj Produkt</button>
+                      <div class ="subnav-content">
+                        <h:link outcome="dodaj_produkt.xhtml">Opcja 1</h:link>
+                        <div class ="subnav">
+                            <button class ="subnavbtn">Opcja 2 (zagnieżdżenie)<i class ="fa fa-caret-down"></i></button>
+                            <div class ="subnav-content">
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 1</h:link>
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 2</h:link>
+                              <h:link outcome="dodaj_produkt.xhtml">Opcja zagnieżdzona 3</h:link>
+                            </div>
+                          </div>
+                        <h:link outcome="dodaj_produkt.xhtml">Opcja 3</h:link>
+                      </div>
+                    </div>
+                    <div class ="subnav">
+                      <button class ="subnavbtn">Lista Produktów</button>
+                      <div class ="subnav-content">
+                        <h:link outcome="lista_produktow.xhtml">Opcja 1</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 2</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 3</h:link>
+                        <h:link outcome="lista_produktow.xhtml">Opcja 4</h:link>
+                      </div>
+                    </div>
+                    <h:link outcome="galeria.xhtml">Galeria</h:link>
+                    <h:link outcome="o_nas.xhtml">O projekcie</h:link>
+                    <h:link outcome="kontakt.xhtml">Kontakt</h:link>
+                    zmien dane wyloguj zaloguj TODO
+                  </div>
+            </nav>
+        </section>
+        <section id="s2">
+            <article>
+                <h3>Zawartość koszyka</h3>
+                <ul>
+                    <li class="cart-element">
+                        <p class="item">Nazwa produktu</p>
+                        <p class="category">Kategoria produktu</p>
+                    </li>
+                </ul>
+                <h:link outcome="podsumowanie.xhtml">Złóż zamówienie</h:link>
+            </article>
+        </section>
+            <section id="s3">
+                <footer>
+                    <div>
+                        <h3>Twórcy</h3>
+                        <p>Strona stworzona przez <b>Błażeja Krzeptowskiego</b> i <b> Macieja Witkowskiego</b>.</p>
+                    </div>
+                    <div>
+                        username TODO
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </h:body>
+</html>
+

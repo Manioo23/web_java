@@ -60,13 +60,21 @@
         <section id="s2">
             <article>
                 <h3>Zawartość koszyka</h3>
-                <ul>
-                    <li class="cart-element">
-                        <p class="item">Nazwa produktu</p>
-                        <p class="category">Kategoria produktu</p>
-                    </li>
-                </ul>
-                <h:link outcome="podsumowanie.xhtml">Złóż zamówienie</h:link>
+                <h:form>
+                <p>Wybierz sposób dostarczenia</p>
+                <h:selectOneRadio id="goalSelectOneRadio">
+                    <f:selectItem itemValue="paczkomat" itemLabel="Paczkomat 19.99zł"/>
+                    <f:selectItem itemValue="kurier" itemLabel="Kurier 27.99zł"/>
+                    <f:selectItem itemValue="poczta" itemLabel="Poczta Polska 15.99zł"/>
+                    <f:selectItem itemValue="odbior" itemLabel="Odbiór w punkcie 0.00zł"/>
+                    <f:validateRequired/>
+                </h:selectOneRadio>
+                <h:outputText value="Ilość produktów: #{cartBean.numberOfProducts}"/>
+                <h:outputText value="Cena produktów: #{cartBean.productsValue}"/>
+                <h:outputText value="Cena Całkowita: #{cartBean.wholeValue}"/>             
+                <h:commandButton value="Złóż zamówienie"/>
+                <h:commandButton value="Powrót do listy zakupów"/>
+             </h:form>
             </article>
         </section>
             <section id="s3">

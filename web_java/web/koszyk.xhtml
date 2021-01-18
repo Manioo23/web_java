@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Licznik wartości odżywczych</title>
         <meta charset="UTF-8"/>
@@ -69,11 +70,13 @@
                     <f:selectItem itemValue="odbior" itemLabel="Odbiór w punkcie 0.00zł"/>
                     <f:validateRequired/>
                 </h:selectOneRadio>
-                <h:outputText value="Ilość produktów: #{cartBean.numberOfProducts}"/>
-                <h:outputText value="Cena produktów: #{cartBean.productsValue}"/>
-                <h:outputText value="Cena Całkowita: #{cartBean.wholeValue}"/>             
-                <h:commandButton value="Złóż zamówienie"/>
-                <h:commandButton value="Powrót do listy zakupów"/>
+                <h:commandButton value="Zatwierdź sposób dostarczenia"/>
+                <br/>
+                <br/>
+                <h:outputText value="Ilość produktów: "/>
+                <h:outputText value="Cena produktów: "/>
+                <h:outputText value="Cena całkowita: #{cartBean.price}"/>             
+                
              </h:form>
             </article>
         </section>

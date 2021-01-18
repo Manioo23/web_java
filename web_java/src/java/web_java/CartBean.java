@@ -3,6 +3,7 @@
 package sessiontracking;
 
 import java.io.Serializable;
+import java.util.Map;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeSet;
@@ -11,10 +12,12 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean( name="cartBean" )
 @SessionScoped
-public class SelectionsBean implements Serializable {
+public class CartBean implements Serializable {
     // Map of delivery services
     private static final HashMap< String, String > deliveryMap =
         new HashMap< String, String >();
+    private static final HashMap<String, Float> itemsMap = 
+        new HashMap<String, Float >(); // Produkt na cenę
 
     // Delivery map initialization
     static
@@ -25,12 +28,24 @@ public class SelectionsBean implements Serializable {
         deliveryMap.put( "odbior", "Odbiór osobisty" );
     }
 
-    private String selection; // stores the current selection
+    private String selection = "odbior"; // stores the current selection
     private float price = 0.0f;
     // returns the current selection
 
-    public String getPrice() {
-        return "Chuj i dupa";
+    public int getItemsCount() {
+        return itemsMap.size();
+    }
+
+    public float getItemsPrice() {
+        float res = 0.0f;
+        for (Map.Entry<String, Float> entry : itemsMap.entrySet()) {
+            res += entry.getValue();
+        }
+
+        return res;
+    }
+    public float getPrice() {
+        return price;
     }
 
     public String getSelection()
@@ -42,26 +57,10 @@ public class SelectionsBean implements Serializable {
     public void setSelection( String topic )
     {
         selection = deliveryMap.get( topic );
-        switch (topic) {
-            case kurier:
-                price = 27.99f
-                break;
-            case paczkomat:
-                price = 19.99f
-                break;
-            case poczta:
-                price = 15.99f
-                break;
-            default:
-                price = 0.0f
-                break;
-        }
-        selections.add( selection );
+        price = 1000.0f;
+        
     } // end method setSelection
 
     // return the Set of selections
-    public String[] getSelections()
-    {
-        return selections.toArray( new String[ selections.size() ] );
-    } // end method getSelections
+    //end method getSelections
 } // end class SelectionsBean

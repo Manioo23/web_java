@@ -62,24 +62,24 @@
             <article>
                 <h3>Zawartość koszyka</h3>
                 <h:form>
-                <p>Wybierz sposób dostarczenia</p>
-                <h:selectOneRadio id="goalSelectOneRadio">
-                    <f:selectItem itemValue="paczkomat" itemLabel="Paczkomat 19.99zł"/>
-                    <f:selectItem itemValue="kurier" itemLabel="Kurier 27.99zł"/>
-                    <f:selectItem itemValue="poczta" itemLabel="Poczta Polska 15.99zł"/>
-                    <f:selectItem itemValue="odbior" itemLabel="Odbiór w punkcie 0.00zł"/>
-                    <f:validateRequired/>
-                </h:selectOneRadio>
-                <br/>
-                <br/>
-                <h:outputText value="Ilość produktów: #{cartBean.itemsCount}"/>
-                <br/>
-                <h:outputText value="Cena produktów: #{cartBean.itemsPrice}zł"/>
-                <br/>
-                <h:outputText value="Cena całkowita: #{cartBean.price}zł"/>      
-                <br/>       
-                <h:commandButton action="potwierdzenie" value="Zatwierdź zamówienie"/>
-             </h:form>
+                    <p>Wybierz sposób dostarczenia</p>
+                    <h:selectOneRadio id="goalSelectOneRadio" value="#{cartBean.selection}">
+                        <f:selectItem itemValue="paczkomat" itemLabel="Paczkomat 19.99zł"/>
+                        <f:selectItem itemValue="kurier" itemLabel="Kurier 27.99zł"/>
+                        <f:selectItem itemValue="poczta" itemLabel="Poczta Polska 15.99zł"/>
+                        <f:selectItem itemValue="odbior" itemLabel="Odbiór w punkcie 0.00zł"/>
+                        <f:validateRequired/>
+                    </h:selectOneRadio>
+                    <br/>
+                    <br/>
+                    <h:outputText value="Ilość produktów: #{cartBean.itemsCount}"/>
+                    <br/>
+                    <h:outputText value="Cena produktów: #{cartBean.itemsPrice}zł"/>
+                    <br/>
+                    <h:outputText value="Cena całkowita: #{cartBean.price}zł"/>      
+                    <br/>       
+                    <h:commandButton action="potwierdzenie" value="Zatwierdź zamówienie"/>
+                </h:form>
             </article>
         </section>
             <section id="s3">

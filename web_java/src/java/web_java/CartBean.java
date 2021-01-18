@@ -57,7 +57,22 @@ public class CartBean implements Serializable {
     public void setSelection( String topic )
     {
         selection = deliveryMap.get( topic );
-        price = 1000.0f;
+        
+        switch(topic) {
+          
+        case "poczta":
+            price = 15.99f;
+            break;
+        case "paczkomat":
+            price = 19.99f;
+            break;
+        case "kurier":
+            price = 27.99f;
+            break;
+        default:
+            price = 0.0f;
+            break;
+        }
         
     } // end method setSelection
 

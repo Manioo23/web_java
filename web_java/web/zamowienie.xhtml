@@ -64,6 +64,7 @@
                 <div>
                     <h3>Lista produktow</h3>
                 </div>
+                <div>
                     <h:form>
                         <h:selectOneMenu value= "#{categoryBean.category}">
                             <f:selectItem itemValue="odzywki_bialkowe"        
@@ -72,15 +73,19 @@
                                 itemLabel="Kreatyny" />
                             <f:selectItem itemValue="odzywki_na_mase"
                                 itemLabel="Odzywki na mase" />
-                        </h:selectOneMenu>
-                        <h:commandButton value="Zatwierdz kategorię"/>
+                            <f:ajax render="results" />
+                        </h:selectOneMenu>    
                     </h:form>
-                    <h:form>
-                        <h:selectManyCheckbox value="#{categoryBean.choices}"> 
-                            <c:forEach  var="item" items="#{categoryBean.data}" >
-                                <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)}"/> 
-                            </c:forEach>
-                        </h:selectManyCheckbox>
+                    
+                </div>
+                        <h:form>
+                            <h:panelGroup id="results">
+                                <h:selectManyCheckbox value="#{categoryBean.choices}"> 
+                                    <c:forEach  var="item" items="#{categoryBean.data}" >
+                                        <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)zl}"/> 
+                                    </c:forEach>
+                                </h:selectManyCheckbox>
+                            </h:panelGroup>
                         
 
                             <div>

@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
     <h:head>
         <title>Licznik wartości odżywczych</title>
         <meta charset="UTF-8"/>
@@ -63,37 +65,35 @@
                     <h3>Lista produktow</h3>
                 </div>
                 <div>
-                    <h:selectOneMenu value= "#{categoryBean.category}" >
-                        <f:selectItem itemValue="odzywki_bialkowe"        
-                            itemLabel="Odzywki bialkowe" />    
-                        <f:selectItem itemValue="kreatyny"
-                            itemLabel="Kreatyny" />
-                        <f:selectItem itemValue="odzywki_na_mase"
-                            itemLabel="Odzywki na mase" />
-                    </h:selectOneMenu>
+                    <h:form>
+                        <h:selectOneMenu value= "#{categoryBean.category}" onchange="submit()">
+                            <f:selectItem itemValue="odzywki_bialkowe"        
+                                itemLabel="Odzywki bialkowe" />    
+                            <f:selectItem itemValue="kreatyny"
+                                itemLabel="Kreatyny" />
+                            <f:selectItem itemValue="odzywki_na_mase"
+                                itemLabel="Odzywki na mase" />
+                        </h:selectOneMenu>    
+                    </h:form>
+                    
                 </div>
-                <div class ="box-wrapper">
-                    <div class ="content-wrapper">
                         <h:form>
-                            <h:selectManyCheckbox value = "#{userData.data}"> 
+                            <h:selectManyCheckbox value="#{categoryBean.choices}"> 
                                 <c:forEach  var="item" items="#{categoryBean.data}" >
-                                    <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.cena(item)}"/> 
+                                    <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)}"/> 
                                 </c:forEach>
                             </h:selectManyCheckbox>
                         
 
                             <div>
-                                <label>Obecnie w koszyku znajduje się: "#{}"  produktow</label>
+                                <label>Obecnie w koszyku znajduje się: "#{cartBean.itemsCount}"  produktow</label>
                             </div>
                             <div>
     
-                                <h:commandButton value="Podsumowanie" type="button" action ="Przenies na strone koszyka"  />
-                                <h:commandButton value="Dodaj do koszyka" action = "Dodaj rodukt do koszyka"/>
+                                <h:commandButton value="Dodaj produkt do koszyka"/>
+                                <h:commandButton value="Przejdz do Koszyka" action = "koszyk"/>
                             </div>
                         </h:form>
-                    </div>
-                    
-                </div>
             </section>
             <section id="s3">
                 <footer>

@@ -14,7 +14,7 @@ import java.util.Map;
 @SessionScoped
     public class CategoryBean implements Serializable
        {
-            private String category;
+            private static String category;
             private String[] choices;
             public static HashMap<String, String> products = new HashMap<String, String>();
             public static HashMap<String, Float> prices = new HashMap<String, Float>();
@@ -66,7 +66,10 @@ import java.util.Map;
             public void setChoices( String[] _choices )
             {
                this.choices = _choices;
-
+               CartBean.itemsMap.clear();
+               for (String ch : _choices) {
+                   CartBean.itemsMap.put(ch, prices.get(ch));
+               }
 
             } // end method setName
 

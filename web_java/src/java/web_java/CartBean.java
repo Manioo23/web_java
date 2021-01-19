@@ -1,6 +1,6 @@
 // SelectionsBean.java
 // Manages a user's topic selections
-package sessiontracking;
+package web_java;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -14,9 +14,9 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class CartBean implements Serializable {
     // Map of delivery services
-    private static final HashMap< String, String > deliveryMap =
+    public static final HashMap< String, String > deliveryMap =
         new HashMap< String, String >();
-    private static final HashMap<String, Float> itemsMap = 
+    public static final HashMap<String, Float> itemsMap = 
         new HashMap<String, Float >(); // Produkt na cenę
 
     // Delivery map initialization
@@ -45,7 +45,7 @@ public class CartBean implements Serializable {
         return res;
     }
     public float getPrice() {
-        return price;
+        return price + getItemsPrice();
     }
 
     public String getSelection()

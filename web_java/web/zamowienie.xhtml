@@ -64,29 +64,27 @@
                 <div>
                     <h3>Lista produktow</h3>
                 </div>
-                <div>
                     <h:form>
-                        <h:selectOneMenu value= "#{categoryBean.category}" onchange="submit()">
+                        <h:selectOneMenu value= "#{categoryBean.category}">
                             <f:selectItem itemValue="odzywki_bialkowe"        
                                 itemLabel="Odzywki bialkowe" />    
                             <f:selectItem itemValue="kreatyny"
                                 itemLabel="Kreatyny" />
                             <f:selectItem itemValue="odzywki_na_mase"
                                 itemLabel="Odzywki na mase" />
-                        </h:selectOneMenu>    
+                        </h:selectOneMenu>
+                        <h:commandButton value="Zatwierdz kategorię"/>
                     </h:form>
-                    
-                </div>
-                        <h:form>
-                            <h:selectManyCheckbox value="#{categoryBean.choices}"> 
-                                <c:forEach  var="item" items="#{categoryBean.data}" >
-                                    <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)}"/> 
-                                </c:forEach>
-                            </h:selectManyCheckbox>
+                    <h:form>
+                        <h:selectManyCheckbox value="#{categoryBean.choices}"> 
+                            <c:forEach  var="item" items="#{categoryBean.data}" >
+                                <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)}"/> 
+                            </c:forEach>
+                        </h:selectManyCheckbox>
                         
 
                             <div>
-                                <label>Obecnie w koszyku znajduje się: "#{cartBean.itemsCount}"  produktow</label>
+                                <h:outputText value="Obecnie w koszyku znajduje się: #{cartBean.itemsCount} produktow"/>
                             </div>
                             <div>
     

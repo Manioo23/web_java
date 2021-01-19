@@ -66,23 +66,33 @@
                 </div>
                 <div>
                     <h:form>
-                        <h:selectOneMenu value= "#{categoryBean.category}">
+                        <h:selectOneMenu value= "#{categoryBean.category}" onchange="location.reload()">
                             <f:selectItem itemValue="odzywki_bialkowe"        
                                 itemLabel="Odzywki bialkowe" />    
                             <f:selectItem itemValue="kreatyny"
                                 itemLabel="Kreatyny" />
                             <f:selectItem itemValue="odzywki_na_mase"
                                 itemLabel="Odzywki na mase" />
-                            <f:ajax render="results" />
+                            <f:ajax render="@form" execute="@form" />
                         </h:selectOneMenu>    
                     </h:form>
                     
                 </div>
                         <h:form>
                             <h:panelGroup id="results">
-                                <h:selectManyCheckbox value="#{categoryBean.choices}"> 
-                                    <c:forEach  var="item" items="#{categoryBean.data}" >
-                                        <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)zl}"/> 
+                                <h:selectManyCheckbox value="#{categoryBean.choices}" rendered='#{categoryBean.category == "odzywki_na_mase"}'> 
+                                    <c:forEach  var="item" items="#{categoryBean.masa}" >
+                                        <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)}zl"/> 
+                                    </c:forEach>
+                                </h:selectManyCheckbox>
+                                <h:selectManyCheckbox value="#{categoryBean.choices}" rendered='#{categoryBean.category == "kreatyny"}'> 
+                                    <c:forEach  var="item" items="#{categoryBean.kreatyna}" >
+                                        <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)}zl"/> 
+                                    </c:forEach>
+                                </h:selectManyCheckbox>
+                                <h:selectManyCheckbox value="#{categoryBean.choices}" rendered='#{categoryBean.category == "odzywki_bialkowe"}'> 
+                                    <c:forEach  var="item" items="#{categoryBean.bialka}" >
+                                        <f:selectItem itemValue = "#{item}" itemLabel = "#{item}  -  #{categoryBean.getCena(item)}zl"/> 
                                     </c:forEach>
                                 </h:selectManyCheckbox>
                             </h:panelGroup>

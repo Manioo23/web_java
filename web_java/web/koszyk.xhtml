@@ -62,7 +62,7 @@
             <article>
                 <h3>Zawartość koszyka</h3>
                 <h:form>
-                <h:commandButton action="zamowienie" value="Wróć do zamówienia"/>
+                <h:link outcome="zamowienie.xhtml" value="Wróć do zamówienia"/>
                     <p>Wybierz sposób dostarczenia</p>
                     <h:selectOneRadio id="goalSelectOneRadio" value="#{cartBean.selection}">
                         <f:selectItem itemValue="paczkomat" itemLabel="Paczkomat 19.99zł"/>

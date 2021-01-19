@@ -93,7 +93,7 @@ import java.util.Map;
                 int i = 0;
                 lista = new String[3];
                 for (Map.Entry<String, String> entry : products.entrySet()) {
-                    if (entry.getValue() == "kreatyna"){
+                    if (entry.getValue() == "kreatyny"){
                         lista[i] = entry.getKey();
                         i++;
                     }

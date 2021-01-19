@@ -66,7 +66,6 @@ import java.util.Map;
             public void setChoices( String[] _choices )
             {
                this.choices = _choices;
-               CartBean.itemsMap.clear();
                for (String ch : _choices) {
                    CartBean.itemsMap.put(ch, prices.get(ch));
                }

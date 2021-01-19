@@ -35,7 +35,10 @@ public class CartBean implements Serializable {
     public int getItemsCount() {
         return itemsMap.size();
     }
-
+    
+    public void clearCart() {
+        itemsMap.clear();
+    }
     public float getItemsPrice() {
         float res = 0.0f;
         for (Map.Entry<String, Float> entry : itemsMap.entrySet()) {
